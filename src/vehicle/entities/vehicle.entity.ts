@@ -1,8 +1,8 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class vehicle {
-    @PrimaryGeneratedColumn()
+    @PrimaryColumn()
     vehicle_id: number;
 
     @Column()
@@ -14,6 +14,7 @@ export class vehicle {
     @Column()
     vehicle_model: string;
 
-// FF KEY PENDIENTE 
+    @Column()
+    carrier_carrier_id: number;
 }
 

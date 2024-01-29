@@ -9,7 +9,7 @@ export class Service {
     package_size: string;
 
     @Column()
-    origen: string;
+    origin: string;
 
     @Column()
     destination: number;
@@ -19,5 +19,11 @@ export class Service {
 
     @Column()
     service_status: string;
-    
+
+    @Column()
+    carrier_carrier_id: number;
+
+    @Column()
+    client_client_id: number;
+
 }
