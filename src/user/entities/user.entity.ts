@@ -17,6 +17,6 @@ export class User {
     @Column()
     user_rol: string;
 
-    @Column()
+    @Column({ unique: true})
     user_email: string;
 }
