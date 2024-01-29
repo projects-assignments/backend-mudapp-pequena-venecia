@@ -6,6 +6,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ClientModule } from './client/client.module';
 import { CarrierModule } from './carrier/carrier.module';
+import { ServiceModule } from './service/service.module';
+import { VehicleModule } from './vehicle/vehicle.module';
 import config from './config/config';
 
 @Module({
@@ -22,7 +24,9 @@ import config from './config/config';
     }),
     UserModule,
     ClientModule,
-    CarrierModule],
+    CarrierModule,
+    ServiceModule,
+    VehicleModule],
   controllers: [AppController],
   providers: [AppService],
 })
