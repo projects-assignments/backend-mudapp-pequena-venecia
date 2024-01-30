@@ -17,9 +17,5 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "moduleResolution": "node",
-    "paths": {
-      "class-validator": ["node_modules/class-validator"]
-    }
   }
 }

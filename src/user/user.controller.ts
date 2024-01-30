@@ -13,19 +13,13 @@ export class UserController {
     return await this.userService.createUser(createUserDto);
   }
   
-
-  // @Post()
-  // create(@Body() createUserDto: CreateUserDto) {
-  //   return this.userService.create(createUserDto);
-  // }
-
   @Get()
   findAll() {
     return this.userService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: number) {
     return this.userService.findOne(+id);
   }
 
@@ -39,3 +33,4 @@ export class UserController {
     return this.userService.remove(+id);
   }
 }
+
