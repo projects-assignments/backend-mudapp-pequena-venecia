@@ -6,12 +6,15 @@ export class RegisterDto{
     @IsString()
     user_name: string;
 
+    @IsString()
+    user_lastname: string;
+
     @IsEmail()
-    user_mail: string;
+    user_email: string;
     
     @Transform(({value}) => value.trim())
     @IsString()
-    @MinLength(10)
+    @MinLength(1)
     user_password: string;
 
     @IsString()

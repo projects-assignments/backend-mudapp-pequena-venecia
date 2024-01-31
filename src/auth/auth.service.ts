@@ -1,19 +1,21 @@
 import { Injectable } from '@nestjs/common';
 import { UserService } from 'src/user/user.service';
+import { RegisterDto } from './dto/register.dto';
 
 @Injectable()
 export class AuthService {
+constructor(private readonly userService: UserService) {}
 
-    constructor(
-        private readonly userService: UserService) {}
+//primer userService es minuscula porque es la variable que almacena los metodos//
 
-    //primer userService es minuscula porque es la variable que almacena los metodos//
-
-register(){
-    return 'register';
+async register(registerDto: RegisterDto){
+    return await this.userService.create(registerDto);
 }
+//Esto llama al create del userservice para que este finalmente inserte en la DB //
+
+
 login(){
-    return 'login';
+return 'login';
 }
 }
 
