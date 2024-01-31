@@ -8,6 +8,7 @@ import { ClientModule } from './client/client.module';
 import { CarrierModule } from './carrier/carrier.module';
 import { ServiceModule } from './service/service.module';
 import { VehicleModule } from './vehicle/vehicle.module';
+import { AuthModule } from './auth/auth.module';
 import config from './config/config';
 
 @Module({
@@ -26,7 +27,8 @@ import config from './config/config';
     ClientModule,
     CarrierModule,
     ServiceModule,
-    VehicleModule],
+    VehicleModule,
+    AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })

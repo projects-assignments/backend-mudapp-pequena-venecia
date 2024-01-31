@@ -7,27 +7,22 @@ import { User } from './entities/user.entity';
 
 @Injectable()
 export class UserService {
+
   constructor(
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
   ) {}
 
-  async createUser(userData: CreateUserDto): Promise<User> {
-    try {
-      const newUser = this.userRepository.create(userData);
-      return await this.userRepository.save(newUser);
-    } catch (error) {
-      throw new Error('Error al crear el usuario');
-    }
-  }
+create (CreateUserDto: CreateUserDto){
+  return this.userRepository.save(CreateUserDto);
+}
+
+//COMO VIAJA LA INFORMACIÓN A TRAVÉS DEL OBJETO Y SI CUMPLE LOS PARAMETROS //
 
   async findOneByEmail(email: string): Promise<User | undefined> {
     return this.userRepository.findOne({ where: { user_email: email } });
   }
-
-
-
-
+  //La accioón o metodo findonebyemail me va aretornar si extiste el usuario o no en la DV//
 
   findAll() {
     return `This action returns all user`;
@@ -43,6 +38,16 @@ export class UserService {
   }
 }
 
+// antigua forma de create:
+
+ // async createUser(userData: CreateUserDto): Promise<User> {
+  //   try {
+  //     const newUser = this.userRepository.create(userData);
+  //     return await this.userRepository.save(newUser);
+  //   } catch (error) {
+  //     throw new Error('Error al crear el usuario');
+  //   }
+  // }
 
 
 //   async findAll(): Promise<User[]> {
