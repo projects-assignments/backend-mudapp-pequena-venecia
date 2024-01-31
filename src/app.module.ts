@@ -9,6 +9,7 @@ import { CarrierModule } from './carrier/carrier.module';
 import { ServiceModule } from './service/service.module';
 import { VehicleModule } from './vehicle/vehicle.module';
 import config from './config/config';
+import { PaymentModule } from './payment/payment.module';
 
 @Module({
   imports: [
@@ -26,7 +27,8 @@ import config from './config/config';
     ClientModule,
     CarrierModule,
     ServiceModule,
-    VehicleModule],
+    VehicleModule,
+  PaymentModule], //Faltaba el modulo payment
   controllers: [AppController],
   providers: [AppService],
 })

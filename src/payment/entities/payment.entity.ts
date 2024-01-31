@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryColumn } from "typeorm";
 
 
-@Entity()
+@Entity({name:"payment"})
 export class Payment {
     @PrimaryColumn()
     payment_id: number;

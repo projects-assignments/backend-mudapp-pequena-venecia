@@ -1,26 +1,33 @@
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm'; //expone métodos para pueda conectar con BD
 import { CreatePaymentDto } from './dto/create-payment.dto';
 import { UpdatePaymentDto } from './dto/update-payment.dto';
+import { Payment } from './entities/payment.entity';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class PaymentService {
+  constructor(
+    @InjectRepository(Payment)
+    private paymentRepository: Repository<Payment>,
+  ) {}
   create(createPaymentDto: CreatePaymentDto) {
-    return 'This action adds a new payment';
+    return this.paymentRepository.create(createPaymentDto)
   }
 
   findAll() {
-    return `This action returns all payment`;
+    return this.paymentRepository.find(); //Para encontrar todos
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} payment`;
+    return this.paymentRepository.findOneBy({payment_id:id}); 
   }
 
   update(id: number, updatePaymentDto: UpdatePaymentDto) {
-    return `This action updates a #${id} payment`;
+    return this.paymentRepository.update(id, updatePaymentDto);
   }
 
   remove(id: number) {
-    return `This action removes a #${id} payment`;
+    return this.paymentRepository.delete(id);
   }
 }
