@@ -1,30 +1,46 @@
 // import { User } from "src/user/entities/user.entity";
-import { Column, Entity, PrimaryColumn } from "typeorm";
+import { Rating } from 'src/rating/entities/rating.entity';
+import { Service } from 'src/service/entities/service.entity';
+import { User } from 'src/user/entities/user.entity';
+import { Vehicle } from 'src/vehicle/entities/vehicle.entity';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToMany,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity()
 export class Carrier {
-    @PrimaryColumn()
-    carrier_id: number;
+  [x: string]: any;
+  @PrimaryGeneratedColumn('increment')
+  carrier_id: number;
 
-    @Column({default:true})
-    availability: boolean;
+  @Column({ default: true })
+  availability: boolean;
 
-    @Column()
-    location: string;
+  @Column()
+  location: string;
 
-    @Column()
-    car_rate: number;
+  @Column()
+  car_rate: number;
 
-    @Column()
-    van_rate: number;
+  @Column()
+  van_rate: number;
 
-    @Column()
-    average_rating: number;
+  @OneToMany(() => Rating, (rating) => rating.carrier)
+  @JoinColumn()
+  average_rating: Rating[];
 
-    @Column()
-    user_user_id: number;
+  @OneToOne(() => User, (user) => user.carrier)
+  @JoinColumn()
+  user_user_id: User;
 
-    // @OneToOne(() => User)
-    // @JoinColumn()
-    // user_user_id: User;
+  @OneToMany(() => Service, (service: Service) => service.carrier)
+  service: Service[];
+
+  @OneToMany(() => Vehicle, (vehicle: Vehicle) => vehicle.carrier)
+  vehicle: Vehicle[];
 }

@@ -1,17 +1,25 @@
-import { Column, Entity, PrimaryColumn } from "typeorm";
-
+import { Service } from 'src/service/entities/service.entity';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity()
 export class Payment {
-    @PrimaryColumn()
-    payment_id: number;
+  [x: string]: any;
+  @PrimaryGeneratedColumn('increment')
+  payment_id: number;
 
-    @Column()
-    payment_type:string;
+  @Column()
+  payment_type: string;
 
-    @Column()
-    payment_status:string;
+  @Column()
+  payment_status: string;
 
-    @Column()
-    service_service_id:number;
+  @OneToOne(() => Service, (service) => service.payment)
+  @JoinColumn()
+  service_service_id: Service;
 }
