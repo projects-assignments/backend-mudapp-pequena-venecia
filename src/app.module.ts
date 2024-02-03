@@ -8,6 +8,7 @@ import { ClientModule } from './client/client.module';
 import { CarrierModule } from './carrier/carrier.module';
 import { ServiceModule } from './service/service.module';
 import { VehicleModule } from './vehicle/vehicle.module';
+import { AuthModule } from './auth/auth.module';
 import config from './config/config';
 import { PaymentModule } from './payment/payment.module';
 
@@ -28,7 +29,8 @@ import { PaymentModule } from './payment/payment.module';
     CarrierModule,
     ServiceModule,
     VehicleModule,
-  PaymentModule], //Faltaba el modulo payment
+    PaymentModule, //Faltaba el modulo payment
+    AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
