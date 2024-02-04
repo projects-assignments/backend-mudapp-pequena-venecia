@@ -67,11 +67,16 @@ Realizamos un detallado diagrama entidad-relación tras un exhaustivo análisis 
 
 ## Swagger:
 
+[https://mudapp.onrender.com/api](https://mudapp.onrender.com/api)
 
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/rm1pL9F/Swagger-logo.png" alt="Swagger-logo" border="0"></a>
 
 ## Instrucciones:
 
-Ingresa en (link) y descarga nuestro proyecto, abre tu editor de codigo fuente, y en tu terminal asegurate de instalar las dependencias necesarias (PNPM, TYPEORM, NEST, JEST)
+- Clona el respositorio [Mudapp Pequeña Venecia](https://github.com/projects-assignments/backend-mudapp-pequena-venecia.git)
+
+- Instala en tu terminal PNPM INSTALL
+
 
 
 
