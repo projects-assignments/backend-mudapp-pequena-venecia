@@ -5,10 +5,10 @@
 
 ## Equipo Pequeña Venecia
 conformado por:
-Ana Maria Herrera: Developer 
-Isadora Matias: Developer 
-Jose Alberto Pérez: Product Owner/Developer 
-Karyoli Nieves: Scrum Master/Developer 
+- Ana Maria Herrera: Developer 
+- Isadora Matias: Developer 
+- Jose Alberto Pérez: Product Owner/Developer 
+- Karyoli Nieves: Scrum Master/Developer 
 
 **INDICE**
 1. [Descripción de proyecto](#descripcion)
@@ -19,9 +19,10 @@ Karyoli Nieves: Scrum Master/Developer
 6. [Fichero Dump](#dump)
 7. [Swagger](#swagger)
 8. [Instrucciones de instalación de la app](#instrucciones)
+9. [Presentación visual para cliente](#presentación)
 
 
-- ## Descripción:
+## Descripción:
 "MUDApp es una aplicación de mudanzas revolucionaria que redefine el proceso de contratación. Distinguiéndose de las opciones convencionales, MudApp prioriza la experiencia del usuario al ofrecer un enfoque personalizado y ágil. 
 
 Nuestra plataforma conecta de manera rápida y eficiente a clientes con necesidades de transporte de bienes con transportistas capacitados, proporcionando una solución integral y sin complicaciones para las mudanzas y el transporte de paquetería. Con MudApp, el proceso de contratación se simplifica, permitiendo 
@@ -29,7 +30,7 @@ a los usuarios acceder a servicios de calidad con tan solo unos pocos clics."
 
 Después de haber completado con éxito el diagrama de entidad-relación, hemos dado un paso significativo hacia el desarrollo del backend de nuestro proyecto. Con esta sólida representación visual de la estructura de nuestra base de datos, estamos listos para conectar nuestro backend a la base de datos. Utilizando un entorno en la nube, hemos comenzado a implementar las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para gestionar los datos de manera eficiente. Además, estamos trabajando activamente en resolver las necesidades de los endpoints, asegurando que nuestra API proporcione las funcionalidades requeridas por nuestra aplicación. Este progreso nos acerca cada vez más a la creación de un sistema robusto y funcional.
 
-- ## Metodologia:
+## Metodologia:
 
 Utilizamos un tablero Kanban en Jira para gestionar nuestro trabajo de manera eficiente.Optimizamos la organización de tareas, priorizamos el flujo de trabajo y mantenemos una comunicación fluida dentro del equipo. 
 
@@ -37,18 +38,18 @@ Utilizamos un tablero Kanban en Jira para gestionar nuestro trabajo de manera ef
 
 <a href="https://ibb.co/wNyBDp6"><img src="https://i.ibb.co/MDnZqPN/Captura-de-pantalla-90.png" alt="Captura-de-pantalla-90" border="0"></a>
 
-- ## Diagrama:
+## Diagrama:
 
 Realizamos un detallado diagrama entidad-relación tras un exhaustivo análisis de las necesidades empresariales, identificando las entidades y atributos necesarios para garantizar el correcto funcionamiento del sistema.
 
 <a href="https://ibb.co/mbTzrPc"><img src="https://i.ibb.co/GnpPfr5/diagrama-mudapp-completado.png" alt="diagrama-mudapp-completado" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'></a><br />
 
-- ## Deploy:
+## Deploy:
 
 [MudApp en RENDER](https://mudapp.onrender.com/)
 (aqui ira una imagen del deploy)
 
-- ## Herramientas:
+## Herramientas:
 
 [JIRA](https://pequenavenecia.atlassian.net/jira/software/projects/PVMB/boards/1)
 [MySQL](https://www.mysql.com/products/workbench/)
@@ -61,12 +62,12 @@ Realizamos un detallado diagrama entidad-relación tras un exhaustivo análisis 
 [RENDER](https://render.com/)
 
 
- - ## Dump:
+ ## Dump:
 
 [Acceso al DUMP](https://github.com/projects-assignments/backend-mudapp-pequena-venecia/blob/develop/Dump20240205.sql)
 
 
-- ## Swagger:
+## Swagger:
 
 [https://mudapp.onrender.com/api](https://mudapp.onrender.com/api)
 
@@ -74,6 +75,12 @@ Realizamos un detallado diagrama entidad-relación tras un exhaustivo análisis 
 
 ## Instrucciones:
 
-- Clona el respositorio [Mudapp Pequeña Venecia](https://github.com/projects-assignments/backend-mudapp-pequena-venecia.git)
+1. Clona el respositorio [Mudapp Pequeña Venecia](https://github.com/projects-assignments/backend-mudapp-pequena-venecia.git)
 
-- Instala en tu terminal PNPM INSTALL
+2. Instala en tu terminal PNPM INSTALL
+
+## Presentación: 
+
+[Presentación visual CANVA](https://www.canva.com/design/DAF7KWI18Es/drC0rWuCrjBBNeZGnf6N7g/edit)
+
+<a href="https://ibb.co/mH62syB"><img src="https://i.ibb.co/P5wPpWY/Captura-de-pantalla-91.png" alt="Captura-de-pantalla-91" border="0"></a>
