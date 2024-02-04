@@ -3,26 +3,26 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ConfigModule} from '@nestjs/config';
 import { ClientModule } from './client/client.module';
 import { CarrierModule } from './carrier/carrier.module';
 import { ServiceModule } from './service/service.module';
 import { VehicleModule } from './vehicle/vehicle.module';
 import { AuthModule } from './auth/auth.module';
-import config from './config/config';
 import { PaymentModule } from './payment/payment.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-      isGlobal: true,
-      load: [config],
-    }),
-    TypeOrmModule.forRootAsync({
-      imports: [ConfigModule],
-      inject: [ConfigService],
-      useFactory: (configService: ConfigService) =>
-        configService.get('database'),
+    ConfigModule.forRoot(),
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      entities: ['dist/**/*.entity.js'],
+      synchronize: false,
+      host: 'sql11.freesqldatabase.com',
+      port: 3306,
+      database: 'sql11680539',
+      username: 'sql11680539',
+      password: '343XmK8pZR',
     }),
     UserModule,
     ClientModule,

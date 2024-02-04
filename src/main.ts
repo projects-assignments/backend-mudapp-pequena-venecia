@@ -1,6 +1,8 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 // import { ValidationPipe } from '@nestjs/common/pipes/validation.pipe';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -13,8 +15,20 @@ async function bootstrap() {
 //   }),
 // );
 
+  const config = new DocumentBuilder()
+    .setTitle('MudApp API')
+    .setDescription('API for managing moving services')
+    .setVersion('1.0')
+    .addBearerAuth({
+      type: 'http',
+      scheme: 'bearer',
+      bearerFormat: 'JWT',
+      in: 'header',
+    })
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document);
+
   await app.listen(3001);
 }
 bootstrap();
-
-//SI no se cumple el request de register en el body, gracias al global pipe se obloga al sistema a usar validaciones //
