@@ -2,7 +2,7 @@ import { Service } from 'src/service/entities/service.entity';
 import { User } from 'src/user/entities/user.entity';
 import {
   Entity,
-  JoinColumn,
+  // JoinColumn,
   OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
@@ -15,7 +15,7 @@ export class Client {
   client_id: number;
 
   @OneToOne(() => User, (user) => user.client)
-  @JoinColumn()
+  // @JoinColumn()
   user_user_id: User;
 
   @OneToMany(() => Service, (service: Service) => service.user)

@@ -1,12 +1,13 @@
-import { Carrier } from 'src/carrier/entities/carrier.entity';
-import { Client } from 'src/client/entities/client.entity';
-import { Payment } from 'src/payment/entities/payment.entity';
-import { Rating } from 'src/rating/entities/rating.entity';
+// import { Carrier } from 'src/carrier/entities/carrier.entity';
+// import { Client } from 'src/client/entities/client.entity';
+// import { Payment } from 'src/payment/entities/payment.entity';
+// import { Rating } from 'src/rating/entities/rating.entity';
+import { IsNotEmpty, IsString } from 'class-validator';
 import {
   Column,
   Entity,
-  ManyToOne,
-  OneToOne,
+  // ManyToOne,
+  // OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
@@ -17,29 +18,44 @@ export class Service {
   service_id: number;
 
   @Column()
+  @IsNotEmpty()
+  @IsString()
   package_size: string;
 
   @Column()
+  @IsNotEmpty()
+  @IsString()
   origin: string;
 
   @Column()
-  destination: number;
+  @IsNotEmpty()
+  @IsString()
+  destination: string;
 
   @Column()
+  @IsNotEmpty()
   date_time: Date;
 
   @Column()
+  @IsNotEmpty()
+  @IsString()
   service_status: string;
 
-  @ManyToOne(() => Carrier, (carrier: Carrier) => carrier.service)
-  carrier_carrier_id: Carrier;
+  @Column({ default: "carrier_carrier_id" })
+  carrier_carrier_id: number;
 
-  @ManyToOne(() => Client, (client: Client) => client.service)
-  client_client_id: Client;
+  @Column({ default: "client_client_id" })
+  client_client_id: number;
 
-  @OneToOne(() => Payment, (payment) => payment.service)
-  payment: Payment;
+  // @ManyToOne(() => Carrier, (carrier: Carrier) => carrier.service)
+  // carrier: Carrier;
 
-  @OneToOne(() => Rating, (rating: Rating) => rating.service)
-  rating_rating_id: Rating;
+  // @ManyToOne(() => Client, (client: Client) => client.service)
+  // client: Client;
+
+  // @OneToOne(() => Payment, (payment) => payment.service)
+  // payment: Payment;
+
+  // @OneToOne(() => Rating, (rating: Rating) => rating.service)
+  // rating_rating_id: Rating;
 }

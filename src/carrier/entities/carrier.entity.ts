@@ -1,14 +1,14 @@
 // import { User } from "src/user/entities/user.entity";
 import { Rating } from 'src/rating/entities/rating.entity';
 import { Service } from 'src/service/entities/service.entity';
-import { User } from 'src/user/entities/user.entity';
+// import { User } from 'src/user/entities/user.entity';
 import { Vehicle } from 'src/vehicle/entities/vehicle.entity';
 import {
   Column,
   Entity,
   JoinColumn,
   OneToMany,
-  OneToOne,
+  // OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
@@ -34,9 +34,12 @@ export class Carrier {
   @JoinColumn()
   average_rating: Rating[];
 
-  @OneToOne(() => User, (user) => user.carrier)
-  @JoinColumn()
-  user_user_id: User;
+  // @OneToOne(() => User, (user) => user.carrier)
+  // @JoinColumn()
+  // user_user_id: User;
+
+  @Column()
+  user_user_id: number;
 
   @OneToMany(() => Service, (service: Service) => service.carrier)
   service: Service[];
