@@ -1,4 +1,108 @@
-![](https://imgur.com/MiDuWQ5.png)
+# Proyecto Mudapp
+## La app de las mudanzas. Paso 2 Diseño y Desarrollo del backend (APIRest)
+
+<a href="https://ibb.co/GPmrfsZ"><img src="https://i.ibb.co/GPmrfsZ/como-hacer-una-mini-mudanza.jpg" alt="como-hacer-una-mini-mudanza"></a>
+
+## Equipo Pequeña Venecia
+conformado por:
+Ana Maria Herrera: Developer 
+Isadora Matias: Developer 
+Jose Alberto Pérez: Product Owner/Developer 
+Karyoli Nieves: Scrum Master/Developer 
+
+**INDICE**
+1. [Descripción de proyecto](#descripcion)
+2. [Metodología de trabajo.Tablero Kanban](#metodologia)
+3. [Diagrama Entidad-Relacion](#diagrama) 
+4. [Deploy](#deploy)
+5. [Herramientas utilizadas](#herramientas)
+6. [Fichero Dump](#dump)
+7. [Swagger](#swagger)
+8. [Instrucciones de instalación de la app](#instrucciones)
+
+
+## Descripción:
+"MUDApp es una aplicación de mudanzas revolucionaria que redefine el proceso de contratación. Distinguiéndose de las opciones convencionales, MudApp prioriza la experiencia del usuario al ofrecer un enfoque personalizado y ágil. 
+
+Nuestra plataforma conecta de manera rápida y eficiente a clientes con necesidades de transporte de bienes con transportistas capacitados, proporcionando una solución integral y sin complicaciones para las mudanzas y el transporte de paquetería. Con MudApp, el proceso de contratación se simplifica, permitiendo 
+a los usuarios acceder a servicios de calidad con tan solo unos pocos clics."
+
+Después de haber completado con éxito el diagrama de entidad-relación, hemos dado un paso significativo hacia el desarrollo del backend de nuestro proyecto. Con esta sólida representación visual de la estructura de nuestra base de datos, estamos listos para conectar nuestro backend a la base de datos. Utilizando un entorno en la nube, hemos comenzado a implementar las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para gestionar los datos de manera eficiente. Además, estamos trabajando activamente en resolver las necesidades de los endpoints, asegurando que nuestra API proporcione las funcionalidades requeridas por nuestra aplicación. Este progreso nos acerca cada vez más a la creación de un sistema robusto y funcional.
+
+## Metodologia:
+
+Utilizamos un tablero Kanban en Jira para gestionar nuestro trabajo de manera eficiente.Optimizamos la organización de tareas, priorizamos el flujo de trabajo y mantenemos una comunicación fluida dentro del equipo. 
+
+[¡DALE CLICK Y MIRA NUESTRO TABLERO KANBAN!](https://pequenavenecia.atlassian.net/jira/software/projects/PVMB/boards/1)
+
+<a href="https://ibb.co/wNyBDp6"><img src="https://i.ibb.co/MDnZqPN/Captura-de-pantalla-90.png" alt="Captura-de-pantalla-90" border="0"></a>
+
+## Diagrama:
+
+Realizamos un detallado diagrama entidad-relación tras un exhaustivo análisis de las necesidades empresariales, identificando las entidades y atributos necesarios para garantizar el correcto funcionamiento del sistema.
+
+<a href="https://ibb.co/mbTzrPc"><img src="https://i.ibb.co/GnpPfr5/diagrama-mudapp-completado.png" alt="diagrama-mudapp-completado" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'></a><br />
+
+#Deploy:
+
+[Click aquí para entrar en el proyecto](link)
+(aqui ira una imagen del deploy)
+
+## Herramientas:
+
+[JIRA](https://pequenavenecia.atlassian.net/jira/software/projects/PVMB/boards/1)
+[MySQL](https://www.mysql.com/products/workbench/)
+[VS CODE](https://code.visualstudio.com/)
+[Free SQL Database](https://www.freesqldatabase.com/)
+[NEST JS](https://nestjs.com/)
+[TYPE ORM](https://typeorm.io/)
+[GIT/GITHUB](https://github.com/)
+[SWAGGER](https://swagger.io/tools/open-source/getting-started/)
+[RENDER](https://render.com/)
+
+
+## Dump:
+
+(Aquí te lleva al link de git con el dump)
+
+## Swagger:
+
+
+
+## Instrucciones:
+
+Ingresa en (link) y descarga nuestro proyecto, abre tu editor de codigo fuente, y en tu terminal asegurate de instalar las dependencias necesarias (PNPM, TYPEORM, NEST, JEST)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ![](https://imgur.com/MiDuWQ5.png)
 # MUDApp: : La app de las mudanzas. Paso 2 Diseño y Desarrollo del backend (APIRest)
 
 
@@ -124,4 +228,4 @@ BONUS-TRACK
 | Documentación de la API | La documentación es incorrecta, omite servicios o estos no se corresponden con la implementación, no hay descripción de historias de usuario | La documentación es completa o faltan pocas especificaciones. Falta claridad en la descripción. Faltan historias de usuario y a las que hay les falta información | La documentación es clara y corresponde perfectamente a los servicios. Cuenta con descripciones detalladas y es intuitiva. Se describen las historias de usuario con tareas y criterios de aceptación asociados. |
 | Testing | El porcentaje de cobertura de los tests no supera el 50% | El % de cobertura es inferior al 80% | El % de cobertura es superior al 80% |
 | Implementación de la API | Hay requerimientos que no se resolvieron o su solución es incorrecta. El código es confuso y carece de buenas prácticas. Falta el desarrollo de muchos servicios o éstos son incorrectos. Las consultas a la bbdd son muy ineficientes, lo cual aumenta el tiempo de respuesta. El comportamiento de los endpoints no es el esperado. | Se resuelven satisfactoriamente los requerimientos especificados, pero el código podría mejorarse con buenas prácticas o limpieza. Sobra código o es redundante. | El código es limpio y está bien estructurado. Resuelve satisfactoriamente los requerimientos del proyecto. Se aplicaron buenas prácticas de programación: responsabilidad única, no es redundante y no mezcla capas de abstracción. Las conexiones a la bbbdd son eficientes. |
-| Comunicación del Proyecto | No quedan claros la motivación ni los requerimientos del proyecto. No es posible conocer la evolución del proyecto. La presentación es incompleta y carece de hilo conductor. No refleja para nada el trabajo realizado | Existe cierta calidad en la presentación aunque faltan apartados o estos no están claramente definidos. Existe cierto grado de confusión pero refleja el desarrollo | Las presentaciones están bien preparadas, se ajustan a los apartados requeridos y reflejan correctamente la evolución del proyecto. |
+| Comunicación del Proyecto | No quedan claros la motivación ni los requerimientos del proyecto. No es posible conocer la evolución del proyecto. La presentación es incompleta y carece de hilo conductor. No refleja para nada el trabajo realizado | Existe cierta calidad en la presentación aunque faltan apartados o estos no están claramente definidos. Existe cierto grado de confusión pero refleja el desarrollo | Las presentaciones están bien preparadas, se ajustan a los apartados requeridos y reflejan correctamente la evolución del proyecto. | -->

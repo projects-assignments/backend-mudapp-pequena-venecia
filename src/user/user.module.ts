@@ -12,4 +12,4 @@ import { User } from './entities/user.entity';
 })
 export class UserModule {}
 
-//se exporta el userservice para que otro modulo lo pueda trabajar//
+

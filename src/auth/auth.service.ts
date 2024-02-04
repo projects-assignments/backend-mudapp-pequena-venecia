@@ -57,24 +57,10 @@ return {
 };
   }
 
-async profile({ email, role }: { email: string; role: string }) {
-return await this.usersService.findOneByEmail(email);
+// async profile({ email, role }: { email: string; role: string }) {
+// return await this.usersService.findOneByEmail(email);
+// }
 }
-}
 
 
 
-//el payload es la parte del tokken que tiene informacion util y se transmite de forma segura//
-
-//Es este auth service el que se debe conectar con nuestro users aka otro modulo y utilizar el otro servicio userservice, porque ahi esta el create y findone)//
-//El authservice tiene que traerse todos los metodos que tiene el user service, para eso es necesario inyectarlo en el constructor//
-
-//primer userService es minuscula porque es la variable que almacena los metodos//
-
-//en Documentación nest, overview, exception filters explica las excepciones establecidas de nest//
-//BadRequestException crea el error correcto generado y controlado por nest
-
-//se llama al create del userservice para que este finalmente inserte en la DB //
-//
-
-//el numero 10 representa el SALT, En NestJS, los "salts" o "genSalt" se refieren a un mecanismo para generar "salts" (sal) en la aplicación. Un "salt" es una cadena aleatoria única que se añade a la contraseña antes de aplicarle un algoritmo de hash.

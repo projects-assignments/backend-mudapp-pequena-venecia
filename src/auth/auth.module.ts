@@ -19,4 +19,3 @@ import { jwtConstants } from './constants/jwt.constant';
 })
 export class AuthModule {}
 
-//, jwtConstants se utiliza para almacenar constantes relacionadas con la configuración de JWT 
