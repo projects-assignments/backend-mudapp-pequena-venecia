@@ -7,7 +7,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-@Entity()
+@Entity({name:"payment"})
 export class Payment {
   [x: string]: any;
   @PrimaryGeneratedColumn('increment')

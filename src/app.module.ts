@@ -10,6 +10,7 @@ import { ServiceModule } from './service/service.module';
 import { VehicleModule } from './vehicle/vehicle.module';
 import { AuthModule } from './auth/auth.module';
 import config from './config/config';
+import { PaymentModule } from './payment/payment.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import config from './config/config';
     CarrierModule,
     ServiceModule,
     VehicleModule,
+    PaymentModule, //Faltaba el modulo payment
     AuthModule],
   controllers: [AppController],
   providers: [AppService],
