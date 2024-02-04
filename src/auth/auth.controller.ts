@@ -23,9 +23,3 @@ export class AuthController {
     return this.authService.login(loginDto);
 } }
 
-//El controlador tecnicamente hace el return, pero solo se dedica a recibir una petición, 
-//ver qué debe hacerse con esa petición, le llega una respuesta y se la manda al cliente"   
-//pero es el Auth service el que se lleva el curro //
-//El controller manjea las solicitudes pero delega le proceso a authservice 
-
-//private readonly: declarar una propiedad que es privada (solo accesible dentro de la clase)

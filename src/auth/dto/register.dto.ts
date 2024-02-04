@@ -20,6 +20,3 @@ export class RegisterDto{
     @IsString()
     user_rol: string; 
 }
-
-//transform con el Value.trim limpia los caracteres en blanco y asi no permite que alguien
-//ingrese caracteres vacíos. 

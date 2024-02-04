@@ -18,12 +18,12 @@ create (CreateUserDto: CreateUserDto){
   return this.userRepository.save(CreateUserDto);
 }
 
-//COMO VIAJA LA INFORMACIÓN A TRAVÉS DEL OBJETO Y SI CUMPLE LOS PARAMETROS //
+
 
   async findOneByEmail(email: string): Promise<User | undefined> {
     return this.userRepository.findOne({ where: { user_email: email } });
   }
-  //La accioón o metodo findonebyemail me va aretornar si extiste el usuario o no en la DV//
+  
 
   findAll() {
     return `This action returns all user`;
