@@ -47,7 +47,7 @@ Realizamos un detallado diagrama entidad-relación tras un exhaustivo análisis 
 ## Deploy:
 
 [MudApp en RENDER](https://mudapp.onrender.com/)
-(aqui ira una imagen del deploy)
+
 
 ## Herramientas:
 
