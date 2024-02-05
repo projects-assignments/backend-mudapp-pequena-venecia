@@ -76,8 +76,14 @@ Realizamos un detallado diagrama entidad-relación tras un exhaustivo análisis 
 ## Instrucciones:
 
 1. Clona el respositorio [Mudapp Pequeña Venecia](https://github.com/projects-assignments/backend-mudapp-pequena-venecia.git)
-
-2. Instala en tu terminal PNPM INSTALL
+2. Instala en tu local con el siguiente comando:
+ PNPM INSTALL 
+3. Instala de forma global Nest JS con el siguiente comando:
+   npm i -g @nestjs/cli
+4. Para correr la aplicación:
+   development
+$ pnpm run start
+5. Recuerda que este proyecto ha sido creado con Node, y será necesario para su funcionamiento. 
 
 ## Presentación: 
 
